@@ -29,14 +29,14 @@ class _HomepageState extends State<Homepage> {
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(55.0),
             child: Container(
-                padding: const EdgeInsets.all(2.0),
+                padding: const EdgeInsets.all(1.0),
                 margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: Colors.grey[300],
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(4.0),
+                  padding: const EdgeInsets.all(0.1),
                   child: Material(
                     color: Colors.grey[300],
                     child: Row(
@@ -75,7 +75,7 @@ class _HomepageState extends State<Homepage> {
                 scrollDirection: Axis.horizontal,
                 child: Scrollbar(
                     child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                        padding: const EdgeInsets.fromLTRB(2.0, 10.0, 1.0, 1.0),
                         child: ToggleSwitch(
                           minWidth: 75.0,
                           minHeight: 25.0,
@@ -91,7 +91,7 @@ class _HomepageState extends State<Homepage> {
                             [Color.fromARGB(255, 108, 99, 254)],
                           ],
                           activeFgColor: Colors.white,
-                          inactiveBgColor: Colors.white,
+                          inactiveBgColor: Colors.grey[100],
                           inactiveFgColor: Colors.black,
                           //initialLabelIndex: 0,
                           //totalSwitches: 5,
@@ -114,14 +114,14 @@ class _HomepageState extends State<Homepage> {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding:
-                        const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                        const EdgeInsets.symmetric(vertical: 7, horizontal: 5),
                     //padding: const EdgeInsets.all(8),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(7),
                       child: Container(
                         height: 150,
                         width: MediaQuery.of(context).size.width,
-                        color: Colors.grey[100],
+                        color: Colors.white,
                         child: Row(children: [
                           SizedBox(
                             width: 150,
