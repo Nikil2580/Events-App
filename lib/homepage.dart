@@ -75,12 +75,14 @@ class _HomepageState extends State<Homepage> {
                 scrollDirection: Axis.horizontal,
                 child: Scrollbar(
                     child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 2.0),
                         child: ToggleSwitch(
-                          minWidth: 120.0,
+                          minWidth: 75.0,
+                          minHeight: 25.0,
                           fontSize: 14,
-                          cornerRadius: 7.0,
-                          customWidths: const [95, 95, 95, 95, 95],
+                          cornerRadius: 3.0,
+                          customWidths: const [95, 85, 95, 95, 95],
+                          customHeights: const [40, 40, 40, 40, 40],
                           activeBgColors: const [
                             [Color.fromARGB(255, 108, 99, 254)],
                             [Color.fromARGB(255, 108, 99, 254)],
@@ -121,7 +123,7 @@ class _HomepageState extends State<Homepage> {
                         width: MediaQuery.of(context).size.width,
                         color: Colors.grey[100],
                         child: Row(children: [
-                          Container(
+                          SizedBox(
                             width: 150,
                             height: 200,
                             child: Image.asset(
@@ -131,101 +133,98 @@ class _HomepageState extends State<Homepage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              // width: MediaQuery.of(context).size.width,
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      rolesOrJobs[index],
-                                      textAlign: TextAlign.left,
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                      ),
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    rolesOrJobs[index],
+                                    textAlign: TextAlign.left,
+                                    style: const TextStyle(
+                                      fontSize: 18,
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 6.0, horizontal: 4.0),
-                                      child: Text(entriesdes[index],
-                                          //textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w100,
-                                            color:
-                                                Color.fromARGB(255, 86, 81, 81),
-                                          )),
-                                    ),
-                                    Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            vertical: 5.0, horizontal: 4.0),
-                                        child: Container(
-                                          height: 30,
-                                          child: Row(children: [
-                                            Text(
-                                              timings[index],
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 80),
-                                              child: Container(
-                                                  width: 30,
-                                                  height: 30,
-                                                  alignment:
-                                                      Alignment.centerRight,
-                                                  child: Image.asset(
-                                                      'lib/assets/images/${pics[index]}')),
-                                            )
-                                          ]),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 5.0, horizontal: 3.0),
+                                    child: Text(entriesdes[index],
+                                        //textAlign: TextAlign.left,
+                                        style: const TextStyle(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w100,
+                                          color:
+                                              Color.fromARGB(255, 86, 81, 81),
                                         )),
-                                    Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            vertical: 0, horizontal: 4),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceAround,
-                                          children: [
-                                            TextButton(
-                                                onPressed: () {},
-                                                child: Text(
-                                                  "Details",
-                                                  style: TextStyle(
-                                                      color: Colors.black,
-                                                      fontFamily: 'Roboto',
-                                                      fontWeight:
-                                                          FontWeight.w100),
-                                                )),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 55),
-                                              child: SizedBox(
-                                                height: 24,
-                                                width: 80,
-                                                child: ElevatedButton(
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 5.0, horizontal: 4.0),
+                                      child: SizedBox(
+                                        height: 30,
+                                        child: Row(children: [
+                                          Text(
+                                            timings[index],
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 50),
+                                            child: Container(
+                                                width: 30,
+                                                height: 30,
+                                                alignment:
+                                                    Alignment.centerRight,
+                                                child: Image.asset(
+                                                    'lib/assets/images/${pics[index]}')),
+                                          )
+                                        ]),
+                                      )),
+                                  Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 0, horizontal: 4),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          TextButton(
+                                              onPressed: () {},
+                                              child: const Text(
+                                                "Details",
+                                                style: TextStyle(
+                                                    color: Colors.black,
+                                                    fontFamily: 'Roboto',
+                                                    fontWeight:
+                                                        FontWeight.w100),
+                                              )),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 25),
+                                            child: SizedBox(
+                                              height: 18,
+                                              width: 80,
+                                              child: ElevatedButton(
 
-                                                    // ignore: prefer_const_constructors
-                                                    style: ElevatedButton
-                                                        .styleFrom(
-                                                      primary: Color.fromARGB(
-                                                          255, 108, 99, 254),
-                                                      shape:
-                                                          RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          7)),
-                                                    ),
-                                                    onPressed: () {},
-                                                    child: Text(
-                                                      "Register",
-                                                      style: TextStyle(
-                                                          fontSize: 12),
-                                                    )),
-                                              ),
-                                            )
-                                          ],
-                                        ))
-                                  ]),
-                            ),
+                                                  // ignore: prefer_const_constructors
+                                                  style: ElevatedButton
+                                                      .styleFrom(
+                                                    backgroundColor: const Color.fromARGB(
+                                                        255, 108, 99, 254),
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        7)),
+                                                  ),
+                                                  onPressed: () {},
+                                                  child: const Text(
+                                                    "Register",
+                                                    style: TextStyle(
+                                                        fontSize: 11),
+                                                  )),
+                                            ),
+                                          )
+                                        ],
+                                      ))
+                                ]),
                           )
                         ]),
                       ),
@@ -245,7 +244,7 @@ final List<String> entries = <String>['music', 'product', 'research'];
 final List<String> pics = <String>[
   'Universal-logo.png',
   'paraxel.png',
-  'TCS_Logo.jpg',
+  'TCS_Logo.png',
 ];
 final List<String> timings = <String>[
   '4:20 - 7:30',
@@ -262,4 +261,4 @@ final List<String> rolesOrJobs = <String>[
   'Product Design',
   'Clinical Research'
 ];
-final List<bool> _selections = List.generate(5, (_) => false);
+// final List<bool> _selections = List.generate(5, (_) => false);
